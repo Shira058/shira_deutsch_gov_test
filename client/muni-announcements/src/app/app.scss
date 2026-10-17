@@ -1,0 +1,29 @@
+// A 1rem inline gutter keeps content off the screen edges at 320px; max-inline-size caps line length on desktop.
+.page-header,
+.page-main {
+  max-inline-size: 75rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.page-header {
+  padding-block: 1.5rem 0.5rem;
+
+  h1 {
+    font: var(--mat-sys-headline-medium);
+    margin-block: 0 0.25rem;
+  }
+
+  p {
+    margin-block: 0;
+    color: var(--mat-sys-on-surface-variant);
+  }
+}
+
+.page-main {
+  padding-block: 1rem 2rem;
+}
+
+.authority-picker {
+  inline-size: min(22rem, 100%);
+}

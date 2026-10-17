@@ -1,0 +1,52 @@
+<section class="announcements" [attr.aria-labelledby]="headingId">
+  <h2 class="announcements__title" [id]="headingId">הודעות לתושב</h2>
+
+  <!-- Must stay in the DOM: screen readers announce text changes only in a live region that already exists. -->
+  <p class="announcements__status" role="status">{{ statusMessage() }}</p>
+
+  @if (resource.isLoading()) {
+    <!-- Visual only; the live region above announces loading to screen readers. -->
+    <div class="announcements__loading" aria-hidden="true">
+      <mat-progress-bar mode="indeterminate" />
+      <p>טוען הודעות…</p>
+    </div>
+  } @else if (resource.error()) {
+    <div class="announcements__error" role="alert">
+      <p>לא ניתן לטעון הודעות כרגע.</p>
+      <button matButton="outlined" type="button" (click)="resource.reload()">נסו שוב</button>
+    </div>
+  } @else if (announcements().length) {
+    <!-- Explicit role: Safari drops list semantics (and the item count) when list-style is none. -->
+    <ul class="announcements__list" role="list">
+      @for (item of announcements(); track item.id) {
+        <li>
+          <mat-card
+            appearance="outlined"
+            class="announcement"
+            [class.announcement--urgent]="item.isUrgent"
+          >
+            <mat-card-header>
+              <!-- The badge sits inside the heading so heading navigation also hears "דחוף". -->
+              <h3 mat-card-title>
+                @if (item.isUrgent) {
+                  <span class="announcement__badge">
+                    <mat-icon aria-hidden="true">warning</mat-icon>דחוף
+                  </span>
+                }
+                {{ item.title }}
+              </h3>
+              <p mat-card-subtitle>
+                {{ item.categoryName }} <span aria-hidden="true">·</span> {{ item.publishDate }}
+              </p>
+            </mat-card-header>
+            <mat-card-content>
+              <p>{{ item.summary }}</p>
+            </mat-card-content>
+          </mat-card>
+        </li>
+      }
+    </ul>
+  } @else {
+    <p class="announcements__empty">אין הודעות חדשות</p>
+  }
+</section>

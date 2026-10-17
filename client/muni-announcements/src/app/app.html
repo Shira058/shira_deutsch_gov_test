@@ -1,0 +1,17 @@
+<header class="page-header">
+  <h1>אתר רשות לדוגמה</h1>
+  <p>דף הדגמה לשילוב הרכיב "הודעות לתושב" בכל עמוד באתר.</p>
+</header>
+
+<main class="page-main">
+  <mat-form-field class="authority-picker">
+    <mat-label>בחירת רשות</mat-label>
+    <mat-select [(value)]="authorityCode">
+      @for (authority of authorities; track authority.code) {
+        <mat-option [value]="authority.code">{{ authority.label }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <app-resident-announcements [authorityCode]="authorityCode()" />
+</main>
