@@ -1,2 +1,30 @@
 ﻿# Original exam document - kept local, not published
 בחינה מקצועית - מפתח Muni Sites.md
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+
+# Node / Angular
+node_modules/
+dist/
+out-tsc/
+.angular/
+.sass-cache/
+coverage/
+__screenshots__/
+npm-debug.log*
+yarn-error.log
+
+# Editors and OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.DS_Store
+Thumbs.db

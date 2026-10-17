@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RA_MuniAnnouncements", "server\RA_MuniAnnouncements.csproj", "{04B0F5F8-0E2E-4EAB-95A5-3BBBBBF312BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RA_MuniAnnouncements.Tests", "tests\RA_MuniAnnouncements.Tests\RA_MuniAnnouncements.Tests.csproj", "{979C7308-549E-4236-BAF4-C03FDD37092F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04B0F5F8-0E2E-4EAB-95A5-3BBBBBF312BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B0F5F8-0E2E-4EAB-95A5-3BBBBBF312BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B0F5F8-0E2E-4EAB-95A5-3BBBBBF312BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B0F5F8-0E2E-4EAB-95A5-3BBBBBF312BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{979C7308-549E-4236-BAF4-C03FDD37092F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{979C7308-549E-4236-BAF4-C03FDD37092F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{979C7308-549E-4236-BAF4-C03FDD37092F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{979C7308-549E-4236-BAF4-C03FDD37092F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
